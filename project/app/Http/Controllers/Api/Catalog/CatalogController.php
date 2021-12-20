@@ -6,6 +6,7 @@ use App\Models\Advert;
 use Illuminate\Database\Connection;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 final class CatalogController
@@ -58,6 +59,7 @@ final class CatalogController
         }
 
         return new GetAdvertResponse($advert);
+
     }
 
     public function getPaymentResponseAndUpdateAmount(GetPaymentRequest $request)
@@ -79,6 +81,7 @@ final class CatalogController
             ."&value=". $paymentRequest['parameters']['value'] ) != $paymentRequest['signature'])
         {
             //return response( ['success' => 'false'], 200);
+            //имитация ошибки
         }
 
         $updateAmountAdvertsTable = Advert::find($paymentRequest['item_id']);

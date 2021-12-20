@@ -17,3 +17,4 @@ $router->get('catalog/{id}', 'Catalog\\CatalogController@advert');
 $router->get('payment', 'Catalog\\CatalogController@getPaymentResponseAndUpdateAmount');
 $router->get('paymentSystem', 'Catalog\\CatalogController@sendPaymentRequest');
 
+
