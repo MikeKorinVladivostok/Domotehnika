@@ -8,8 +8,8 @@ CatalogController:
 (тоже мой недосмтотр 
 $connection =  $this->connection->table('adverts');
 
-                if($request->getCategoryId() == 1){
-  должна была встать сюда, вместо конструкции : $records = $this->connection->table('adverts')
+                $records = $this->connection->table('adverts')
+  должна была встать сюда, вместо конструкции 
 
 но в торопях не поставил)
 
